@@ -12,13 +12,13 @@ basic.forever(function () {
     music.playMelody("C5 C C5 C C5 C C5 C ", 120)
 })
 basic.forever(function () {
-    if (cuenta <= 4) {
+    if (cuenta < 3) {
         if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 10) {
             maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
             basic.pause(500)
             maqueen.motorStop(maqueen.Motors.All)
             music.setVolume(255)
-            for (let index = 0; index < 4; index++) {
+            for (let index = 0; index < 8; index++) {
                 strip.showColor(neopixel.colors(NeoPixelColors.Red))
                 basic.pause(200)
                 strip.showColor(neopixel.colors(NeoPixelColors.Blue))
